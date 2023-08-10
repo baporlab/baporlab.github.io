@@ -1,10 +1,10 @@
 ---
 layout: member
-category: staff
-title: Researcher Name
-image: researcher.png
-role: Lab Director
-permalink: 'team/researcher-name'
+category: student
+title: 강규민
+image: kyumin.jpg
+role: PhD Student
+permalink: 'team/kyumin'
 social:
     twitter: https://twitter.com/
     linkedin: https://www.linkedin.com/

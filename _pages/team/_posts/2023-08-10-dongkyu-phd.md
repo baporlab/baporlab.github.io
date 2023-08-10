@@ -1,10 +1,10 @@
 ---
 layout: member
 category: student
-title: Researcher Name
-image: researcher.png
+title: 김동규
+image: dongkyu.jpg
 role: PhD Student
-permalink: 'team/researcher-name'
+permalink: 'team/dongkyu'
 social:
     twitter: https://twitter.com/
     linkedin: https://www.linkedin.com/
