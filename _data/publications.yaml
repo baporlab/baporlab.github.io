@@ -1,0 +1,42 @@
+---
+references:
+- id: hwangDevelopmentBispectralIndex2023
+  abstract: "Background\nProper maintenance of hypnosis is crucial for ensuring the safety of patients undergoing surgery. Accordingly, indicators, such as the Bispectral index (BIS), have been developed to monitor hypnotic levels. However, the black-box nature of the algorithm coupled with the hardware makes it challenging to understand the underlying mechanisms of the algorithms and integrate them with other monitoring systems, thereby limiting their use.\nObjective\nWe propose an interpretable deep learning model that forecasts BIS values 25\_s in advance using 30\_s electroencephalogram (EEG) data.\nMaterial and methods\nThe proposed model utilized EEG data as a predictor, which is then decomposed into amplitude and phase components using fast Fourier Transform. An attention mechanism was applied to interpret the importance of these components in predicting BIS. The predictability of the model was evaluated on both regression and binary classification tasks, where the former involved predicting a continuous BIS value, and the latter involved classifying a dichotomous status at a BIS value of 60. To evaluate the interpretability of the model, we analyzed the attention values expressed in the amplitude and phase components according to five ranges of BIS values. The proposed model was trained and evaluated using datasets collected from two separate medical institutions.\nResults and conclusion\nThe proposed model achieved excellent performance on both the internal and external validation datasets. The model achieved a root-mean-square error of 6.614 for the regression task, and an area under the receiver operating characteristic curve of 0.937 for the binary classification task. Interpretability analysis provided insight into the relationship between EEG frequency components and BIS values. Specifically, the attention mechanism revealed that higher BIS values were associated with increased amplitude attention values in high-frequency bands and increased phase attention values in various frequency bands. This finding is expected to facilitate a more profound understanding of the BIS prediction mechanism, thereby contributing to the advancement of anesthesia technologies."
+  accessed:
+    - year: 2023
+      month: 8
+      day: 10
+  author:
+    - family: Hwang
+      given: Eugene
+    - family: Park
+      given: Hee-Sun
+    - family: Kim
+      given: Hyun-Seok
+    - family: Kim
+      given: Jin-Young
+    - family: Jeong
+      given: Hanseok
+    - family: Kim
+      given: Junetae
+    - family: Kim
+      given: Sung-Hoon
+  citation-key: hwangDevelopmentBispectralIndex2023
+  container-title: Artificial Intelligence in Medicine
+  container-title-short: Artificial Intelligence in Medicine
+  DOI: 10.1016/j.artmed.2023.102569
+  ISSN: 0933-3657
+  issued:
+    - year: 2023
+      month: 9
+      day: 1
+  language: en
+  page: '102569'
+  source: ScienceDirect
+  title: >-
+    Development of a Bispectral index score prediction model based on an
+    interpretable deep learning algorithm
+  type: article-journal
+  URL: https://www.sciencedirect.com/science/article/pii/S0933365723000830
+  volume: '143'
+...

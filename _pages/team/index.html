@@ -8,55 +8,71 @@ permalink: /team/
 
 <h1>{{page.title}}</h1>
 
-<!-- postdoc -->
+<!-- professor -->
 
-<h2><a id="postdoc"></a>Postdoctoral Researcher</h2>
-{% assign members = site.posts | where: 'category', 'postdoc' | sort: 'date' %}
+<h2><a id="professor"></a>Professor</h2>
+{% assign number_displayed = 0 %}
+{% assign members = site.posts | where: 'category', 'professor' | reverse %}
 {% for member in members %}
-<div class="card team-member-card">
-    <div class="row mt-3">
+    {% assign remainder = number_displayed | modulo: 3 %}
+    {% if remainder == 0 %}
+        <div class="row mt-3">
+    {% endif %}
+    <div class="card team-member-card">
         <div class="col-md-2">
             <a href={{member.url}}>
                 <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.image }}"
                     class="card-img img-responsive img-thumbnail"
-                    style="max-width: 100px;"/>
+                    style="max-width: 100px; object-fit: cover; height: 15rem;"/>
             </a>
-        </div>
-
-        <div class="col-md-10">
             <div class="card-body">
             <h4 class="card-title">{{ member.title }}</h4>
             <p class="card-text">{{ member.role }}</p>
             </div>
         </div>
     </div>
-</div>
+    {% assign number_displayed = number_displayed | plus: 1 %}
+    {% if remainder == 2 %}
+        </div>
+    {% endif %}
 {% endfor %}
+{% assign remainder = number_displayed | modulo: 3 %}
+{% if remainder == 2 %}
+</div>
+{% endif %}
 
-<!-- Students -->
+<!-- Researcher -->
 
-<h2><a id="student"></a>Ph.D. Students</h2>
-{% assign members = site.posts | where: 'category', 'student' | sort: 'date' %}
+<h2><a id="student"></a>Researcher</h2>
+{% assign number_displayed = 0 %}
+{% assign members = site.posts | where: 'category', 'researcher' | reverse %}
 {% for member in members %}
-<div class="card team-member-card">
-    <div class="row mt-3">
+    {% assign remainder = number_displayed | modulo: 3 %}
+    {% if remainder == 0 %}
+        <div class="row mt-3">
+    {% endif %}
+    <div class="card team-member-card">
         <div class="col-md-2">
             <a href={{member.url}}>
                 <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.image }}"
                     class="card-img img-responsive img-thumbnail"
-                    style="max-width: 100px;"/>
+                    style="max-width: 100px; object-fit: cover; height: 15rem;"/>
             </a>
-        </div>
-
-        <div class="col-md-10">
             <div class="card-body">
             <h4 class="card-title">{{ member.title }}</h4>
             <p class="card-text">{{ member.role }}</p>
             </div>
         </div>
     </div>
-</div>
+    {% assign number_displayed = number_displayed | plus: 1 %}
+    {% if remainder == 2 %}
+        </div>
+    {% endif %}
 {% endfor %}
+{% assign remainder = number_displayed | modulo: 3 %}
+{% if remainder == 2 %}
+</div>
+{% endif %}
 
 <!-- Staff -->
 
@@ -69,7 +85,7 @@ permalink: /team/
             <a href={{member.url}}>
                 <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.image }}"
                     class="card-img img-responsive img-thumbnail"
-                    style="max-width: 100px;"/>
+                    style="width: 100%; object-fit: cover; height: 15rem;"/>
             </a>
         </div>
 

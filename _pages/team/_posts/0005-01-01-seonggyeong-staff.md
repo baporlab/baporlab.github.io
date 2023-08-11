@@ -8,3 +8,4 @@ permalink: 'team/researcher-name'
 education:
  - Education
 ---
+Bio

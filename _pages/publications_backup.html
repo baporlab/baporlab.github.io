@@ -1,7 +1,7 @@
 ---
 title: "Publications"
 layout: default
-excerpt: "BAPOR Lab -- Publications."
+excerpt: "RT2 Lab -- Publications."
 sitemap: false
 permalink: /publications/
 ---
@@ -12,11 +12,30 @@ permalink: /publications/
     <div class="panel panel-default">
 
     {% for publi in site.data.publications %}
-        <h4 class="mt-0 mb-1">{{ publi.title }}</h4>
         <div class="panel-heading">
             <a data-toggle="collapse" data-parent="#accordion"
                href="#collapse{{forloop.index}}"
                style="color: inherit;">
+            <!-- authors -->
+            {% assign authors = "" | split:"/" %}
+            {% for author in publi.author %}
+                {% assign authors = authors | push: author.family %}
+            {% endfor %}
+            {{ authors | array_to_sentence_string }},
+
+            <!-- title with link -->
+            "{{ publi.title }}",
+
+            <!-- container -->
+            <b>{{ publi.container-title }}</b>
+
+            <!-- issued date -->
+            ({{ publi.issued.date-parts | jsonify | slice: 3,4 }}),
+
+            <!-- DOI -->
+            {% if publi.DOI %}
+                <a href="https://doi.org/{{publi.DOI}}">DOI:{{publi.DOI}}</a>
+            {% endif %}
             </a>
         </div>
 
