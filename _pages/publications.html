@@ -12,21 +12,27 @@ permalink: /publications/
     <div class="panel panel-default">
 
     {% for publi in site.data.publications %}
-        <h4 class="mt-0 mb-1">{{ publi.title }}</h4>
         <div class="panel-heading">
-            <a data-toggle="collapse" data-parent="#accordion"
-               href="#collapse{{forloop.index}}"
-               style="color: inherit;">
-            </a>
-        </div>
+           
+            <!-- title with link -->
+            "{{ publi.title }}",
 
-        <div id="collapse{{forloop.index}}" class="panel-collapse collapse">
-            <div class="panel-body">
-                <p>{{ publi.abstract }}</p>
+            <!-- authors -->
+            {% assign authors = "" | split:"/" %}
+            {% for author in publi.authors %}
+                {% assign authors = authors | push: author %}
+            {% endfor %}
 
-                <a class="btn btn-outline-primary" href="https://doi.org/{{publi.DOI}}"
-                   role="button" target="blank">Link</a>
-            </div>
+            <br><em>{{ authors | array_to_sentence_string }}</em>,
+            
+            <!-- container -->
+            <br><b>{{ publi.publisher }}</b>
+
+            <!-- issued date -->
+            ({{ publi.date | date: "%Y" }}),
+
+            <!-- DOI -->
+            <a href="https://doi.org/{{publi.id}}">{{publi.id}}</a>
         </div>
     {% endfor %}
     </div>

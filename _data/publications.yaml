@@ -1,42 +1,330 @@
----
-references:
-- id: hwangDevelopmentBispectralIndex2023
-  abstract: "Background\nProper maintenance of hypnosis is crucial for ensuring the safety of patients undergoing surgery. Accordingly, indicators, such as the Bispectral index (BIS), have been developed to monitor hypnotic levels. However, the black-box nature of the algorithm coupled with the hardware makes it challenging to understand the underlying mechanisms of the algorithms and integrate them with other monitoring systems, thereby limiting their use.\nObjective\nWe propose an interpretable deep learning model that forecasts BIS values 25\_s in advance using 30\_s electroencephalogram (EEG) data.\nMaterial and methods\nThe proposed model utilized EEG data as a predictor, which is then decomposed into amplitude and phase components using fast Fourier Transform. An attention mechanism was applied to interpret the importance of these components in predicting BIS. The predictability of the model was evaluated on both regression and binary classification tasks, where the former involved predicting a continuous BIS value, and the latter involved classifying a dichotomous status at a BIS value of 60. To evaluate the interpretability of the model, we analyzed the attention values expressed in the amplitude and phase components according to five ranges of BIS values. The proposed model was trained and evaluated using datasets collected from two separate medical institutions.\nResults and conclusion\nThe proposed model achieved excellent performance on both the internal and external validation datasets. The model achieved a root-mean-square error of 6.614 for the regression task, and an area under the receiver operating characteristic curve of 0.937 for the binary classification task. Interpretability analysis provided insight into the relationship between EEG frequency components and BIS values. Specifically, the attention mechanism revealed that higher BIS values were associated with increased amplitude attention values in high-frequency bands and increased phase attention values in various frequency bands. This finding is expected to facilitate a more profound understanding of the BIS prediction mechanism, thereby contributing to the advancement of anesthesia technologies."
-  accessed:
-    - year: 2023
-      month: 8
-      day: 10
-  author:
-    - family: Hwang
-      given: Eugene
-    - family: Park
-      given: Hee-Sun
-    - family: Kim
-      given: Hyun-Seok
-    - family: Kim
-      given: Jin-Young
-    - family: Jeong
-      given: Hanseok
-    - family: Kim
-      given: Junetae
-    - family: Kim
-      given: Sung-Hoon
-  citation-key: hwangDevelopmentBispectralIndex2023
-  container-title: Artificial Intelligence in Medicine
-  container-title-short: Artificial Intelligence in Medicine
-  DOI: 10.1016/j.artmed.2023.102569
-  ISSN: 0933-3657
-  issued:
-    - year: 2023
-      month: 9
-      day: 1
-  language: en
-  page: '102569'
-  source: ScienceDirect
-  title: >-
-    Development of a Bispectral index score prediction model based on an
-    interpretable deep learning algorithm
-  type: article-journal
-  URL: https://www.sciencedirect.com/science/article/pii/S0933365723000830
-  volume: '143'
-...
+# DO NOT EDIT, GENERATED AUTOMATICALLY
+
+- id: doi:10.1016/j.ahj.2023.04.005
+  title: 'Left ventricular remodeling in end-stage liver disease and post-transplant
+    mortality assessed using end-diastolic pressure-volume relation analysis: Observational
+    retrospective study'
+  authors:
+  - Won-Jung Shin
+  - Hye-Mee Kwon
+  - Sung-Hoon Kim
+  - Hwa-Young Jang
+  - Yong-Seok Park
+  - Jae-Hwan Kim
+  - Kyoung-Sun Kim
+  - Young-Jin Moon
+  - In-Gu Jun
+  - Jun-Gol Song
+  - Gyu-Sam Hwang
+  publisher: American Heart Journal
+  date: '2023-08-01'
+  link: https://doi.org/gsbwjb
+- id: doi:10.1016/j.artmed.2023.102569
+  title: Development of a Bispectral index score prediction model based on an interpretable 
+    deep learning algorithm
+  authors:
+  - Eugene Hwang
+  - Hee-Sun Park 
+  - Hyun-Seok Kim
+  - Jin-Young Kim
+  - Hanseok Jeong
+  - Junetae Kim
+  - Sung-Hoon Kim
+  publisher: Artificial Intelligence in Medicine
+  date: "2023-06-28"
+- id: doi:10.3390/bios13060615
+  title: Tablet-Based Wearable Patch Sensor Design for Continuous Cardiovascular System
+    Monitoring in Postoperative Settings
+  authors:
+  - Nourelhuda Mohamed
+  - Hyun-Seok Kim
+  - Manal Mohamed
+  - Kyu-Min Kang
+  - Sung-Hoon Kim
+  - Jae Gwan Kim
+  publisher: Biosensors
+  date: '2023-06-04'
+  link: https://doi.org/gsbwh6
+- id: doi:10.1016/j.cmpb.2023.107478
+  title: An interactive and realistic phantom for cricothyroidotomy simulation of
+    a patient with obesity through a reusable design using 3D-printing and Arduino
+  authors:
+  - Junhyeok Ock
+  - Dayeong Hong
+  - Sojin Moon
+  - Yong-Seok Park
+  - Dong-Woo Seo
+  - Joo Heung Yoon
+  - Sung-Hoon Kim
+  - Namkug Kim
+  publisher: Computer Methods and Programs in Biomedicine
+  date: '2023-05-01'
+  link: https://doi.org/gsbwjc
+- id: doi:10.1109/TNNLS.2023.3273187
+  title: Intraoperative Hypotension Prediction Based on Features Automatically Generated
+    Within an Interpretable Deep Learning Model
+  authors:
+  - Eugene Hwang
+  - Yong-Seok Park
+  - Jin-Young Kim
+  - Sung-Hyuk Park
+  - Junetae Kim
+  - Sung-Hoon Kim
+  publisher: IEEE Transactions on Neural Networks and Learning Systems
+  date: '2023-01-01'
+  link: https://doi.org/gsbwjd
+- id: doi:10.1016/j.exger.2022.112068
+  title: 'Association of C-reactive protein to albumin ratio with postoperative delirium
+    and mortality in elderly patients undergoing hip fracture surgery: A retrospective
+    cohort study in a single large center'
+  authors:
+  - Ha-Jung Kim
+  - Sooho Lee
+  - Sung-Hoon Kim
+  - Sangho Lee
+  - Ji-Hoon Sim
+  - Young-Jin Ro
+  publisher: Experimental Gerontology
+  date: '2023-02-01'
+  link: https://doi.org/gsbwjf
+- id: doi:10.1002/jhbp.1163
+  title: 'Association between red blood cell distribution width and blood transfusion 
+    in patients undergoing living donor liver transplantation: Propensity score analysis'
+  authors:
+  - Ji‐Hoon Sim
+  - Hye‐Mee Kwon
+  - In‐Gu Jun
+  - Sung‐Hoon Kim
+  - Bomi Kim
+  - Sehee Kim
+  - Jun‐Gol Song
+  - Gyu‐Sam Hwang
+  publisher: Journal of Hepato‐Biliary‐Pancreatic Sciences
+  date: "2022-04-24"
+- id: doi:10.1002/lt.26447
+  title: Associations of sarcopenia with graft failure and mortality in patients undergoing living donor liver transplantation
+  authors: 
+  - Ji-Hoon Sim
+  - Hye-Mee Kwon
+  - Kyung-Won Kim
+  - You-Sun Ko
+  - In-Gu Jun
+  - Sung-Hoon Kim
+  - Kyoung-Sun Kim
+  - Young-Jin Moon
+  - Jun-Gol Song
+  - Gyu-Sam Hwang
+  publisher: Liver Translation
+  date: "2022-03-04"
+- id: doi:10.1007/s10877-020-00595-8
+  title: Non-contact thermography-based respiratory rate monitoring in a post-anesthetic
+    care unit
+  authors:
+  - Hye-Mee Kwon
+  - Keita Ikeda
+  - Sung-Hoon Kim
+  - Robert H. Thiele
+  publisher: Journal of Clinical Monitoring and Computing
+  date: '2020-09-25'
+  link: https://doi.org/gsbwjg
+- id: doi:10.1007/s10877-019-00359-z
+  title: 'Detection of intratracheal accumulation of thick secretions by using continuous
+    monitoring of respiratory acoustic spectrum: a preliminary analysis'
+  authors:
+  - Young-Jin Moon
+  - Allison J. Bechtel
+  - Sung-Hoon Kim
+  - Jae-Won Kim
+  - Robert H. Thiele
+  - Randal S. Blank
+  publisher: Journal of Clinical Monitoring and Computing
+  date: '2019-07-20'
+  
+- id: doi:10.2196/13156
+  title: 'Real-Time Monitoring of Blood Pressure Using Digitalized Pulse Arrival Time
+    Calculation Technology for Prompt Detection of Sudden Hypertensive Episodes During
+    Laryngeal Microsurgery: Retrospective Observational Study'
+  authors:
+  - Yong-Seok Park
+  - Sung-Hoon Kim
+  - Yoon Se Lee
+  - Seung-Ho Choi
+  - Seung-Woo Ku
+  - Gyu-Sam Hwang
+  publisher: Journal of Medical Internet Research
+  date: '2020-05-15'
+  link: https://doi.org/gsbwjj
+- id: doi:10.1213/ane.0000000000003397
+  title: 'Device-Related Error in Patient-Controlled Analgesia: Analysis of 82,698
+    Patients in a Tertiary Hospital'
+  authors:
+  - Hyo-Jung Son
+  - Sung-Hoon Kim
+  - Jeong-Ok Ryu
+  - Mi-Ra Kang
+  - Myeong-Hee Kim
+  - Jeong-Hun Suh
+  - Jai-Hyun Hwang
+  publisher: Anesthesia &amp; Analgesia
+  date: '2019-09-01'
+  link: https://doi.org/ggqvvr
+- id: doi:10.1016/j.wneu.2019.04.216
+  title: Effect of Prone Positional Apparatus on the Occurrence of Acute Kidney Injury
+    After Spine Surgery
+  authors:
+  - Seok-Joon Jin
+  - Yong-Seok Park
+  - Sung-Hoon Kim
+  - Dongseop Kim
+  - Woo-Hyun Shim
+  - Dong-Min Jang
+  - Christopher I. Shaffrey
+  - Bhiken I. Naik
+  publisher: World Neurosurgery
+  date: '2019-08-01'
+  link: https://doi.org/gsbwjk
+- id: doi:10.2196/preprints.13156
+  title: 'Real-Time Monitoring of Blood Pressure Using Digitalized Pulse Arrival Time
+    Calculation Technology for Prompt Detection of Sudden Hypertensive Episodes During
+    Laryngeal Microsurgery: Retrospective Observational Study'
+  authors:
+  - Yong-Seok Park
+  - Sung-Hoon Kim
+  - Yoon Se Lee
+  - Seung-Ho Choi
+  - Seung-Woo Ku
+  - Gyu-Sam Hwang
+  publisher: Journal of Medical Internet Research
+  date: '2018-12-15'
+  link: https://doi.org/gsbwjm
+- id: doi:10.1111/pace.13342
+  title: Propofol for implantable cardioverter defibrillator implantation in patients
+    with Brugada syndrome
+  authors:
+  - Hye-Mee Kwon
+  - Sung-Hoon Kim
+  - Se-Ung Park
+  - Jin-Ho Rhim
+  - Hee-Sun Park
+  - Wook-Jong Kim
+  - Gi-Byoung Nam
+  publisher: Pacing and Clinical Electrophysiology
+  date: '2018-05-04'
+  link: https://doi.org/gsbwjn
+- id: doi:10.17245/jdapm.2018.18.2.111
+  title: 'Pulmonary aspiration during intubation in a high-risk patient: A video clip
+    and clinical implications'
+  authors:
+  - Gi-Ho Koh
+  - Sung-Hoon Kim
+  - Hyo-Jung Son
+  - Jun-Young Jo
+  - Seong-Soo Choi
+  - Se-Ung Park
+  - Wook-Jong Kim
+  - Seung-Woo Ku
+  publisher: Journal of Dental Anesthesia and Pain Medicine
+  date: '2018-01-01'
+  link: https://doi.org/gdhgqm
+- id: doi:10.17245/jdapm.2018.18.3.189
+  title: 'Recurrent ST segment elevations in a patient with asymptomatic early repolarization
+    during head and neck surgery: implications of vasospastic angina'
+  authors:
+  - Se-Ung Park
+  - Sung-Hoon Kim
+  - Hye-Mee Kwon
+  - Gi-Ho Koh
+  - Gi-Byoung Nam
+  - Myong-Hwan Karm
+  - Wook-Jong Kim
+  - Seung-Woo Ku
+  publisher: Journal of Dental Anesthesia and Pain Medicine
+  date: '2018-01-01'
+  link: https://doi.org/gdtq9n
+- id: doi:10.1002/lt.24415
+  title: Atrioventricular conduction disturbances immediately after hepatic graft
+    reperfusion and their outcomes in patients undergoing liver transplantation
+  authors:
+  - "Sung-Hoon Kim"
+  - "Young-Jin Moon"
+  - Sooho Lee
+  - "Sung-Moon Jeong"
+  - "Jun-Gol Song"
+  - "Gyu-Sam Hwang"
+  publisher: Liver Transplantation
+  date: '2016-06-24'
+  link: https://doi.org/gsbwjp
+- id: doi:10.1097/eja.0000000000000282
+  title: Preoperative glycosylated haemoglobin as a predictor of postoperative analgesic
+    requirements in diabetic patients
+  authors:
+  - Sung-Hoon Kim
+  - Jai-Hyun Hwang
+  publisher: European Journal of Anaesthesiology
+  date: '2015-10-01'
+  link: https://doi.org/gsbwjq
+- id: doi:10.1016/j.joms.2014.03.011
+  title: Continuous Noninvasive Hemoglobin Measurement Is Useful in Patients Undergoing
+    Double-Jaw Surgery
+  authors:
+  - Sung-Hoon Kim
+  - Jae Moon Choi
+  - Hyun Jeong Kim
+  - Seong-Soo Choi
+  - In Cheol Choi
+  publisher: Journal of Oral and Maxillofacial Surgery
+  date: '2014-09-01'
+  link: https://doi.org/f6rj6h
+- id: doi:10.4097/kjae.2014.66.3.248
+  title: 'Point-of-care monitoring of perioperative intraocular pressure using portable
+    tonometry in a patient with Posner-Schlossman syndrome: a case report'
+  authors:
+  - Sung-Hoon Kim
+  - Jin-Ho Rhim
+  - Young-Jin Moon
+  - Jihion Yu
+  - Jong-Yeon Park
+  - Ashish Bangaari
+  publisher: Korean Journal of Anesthesiology
+  date: '2014-01-01'
+  link: https://doi.org/gsbwjr
+- id: doi:10.1097/aln.0b013e31827bd108
+  title: "Intraoperative Infusion of 0.6&#x2013;0.9 &#xB5;g &#xB7; kg&#x2212;1 &#xB7; min&#x2212;\
+    1 Remifentanil Induces Acute Tolerance in Young Children after Laparoscopic Ureteroneocystostomy"
+  authors:
+  - Sung-Hoon Kim
+  - Min H. Lee
+  - Hyungseok Seo
+  - In-Gyu Lee
+  - Jeong-Yeon Hong
+  - Jai-Hyun Hwang
+  publisher: Anesthesiology
+  date: '2013-02-01'
+  link: https://doi.org/f4mmjk
+- id: doi:10.1213/ane.0b013e318270a6d9
+  title: Beat-to-Beat Tracking of Systolic Blood Pressure Using Noninvasive Pulse
+    Transit Time During Anesthesia Induction in Hypertensive Patients
+  authors:
+  - Sung-Hoon Kim
+  - Jun-Gol Song
+  - Ji-Hyun Park
+  - Jung-Won Kim
+  - Yong-Seok Park
+  - Gyu-Sam Hwang
+  publisher: Anesthesia &amp; Analgesia
+  date: '2013-01-01'
+  link: https://doi.org/gsbwjs
+- id: doi:10.1016/j.transproceed.2010.12.002
+  title: Alterations in QT Interval in Patients Undergoing Living Donor Liver Transplantation
+  authors:
+  - W.-J. Shin
+  - Y.-K. Kim
+  - J.-G. Song
+  - S.-H. Kim
+  - S.-S. Choi
+  - J.-H. Song
+  - G.-S. Hwang
+  publisher: Transplantation Proceedings
+  date: '2011-01-01'
+  link: https://doi.org/dvn7wt
+
