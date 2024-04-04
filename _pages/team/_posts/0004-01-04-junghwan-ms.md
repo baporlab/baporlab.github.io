@@ -1,10 +1,10 @@
 ---
 layout: member
 category: researcher
-title: 김현석
-image: hyunseok.jpg
-role: Research Professor
-permalink: 'team/hyunseok'
+title: 김정환
+image: junghwan.jpg
+role: Researcher
+permalink: 'team/junghwan'
 social:
     twitter: https://twitter.com/
     linkedin: https://www.linkedin.com/

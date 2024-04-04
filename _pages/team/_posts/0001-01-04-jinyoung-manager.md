@@ -1,10 +1,10 @@
 ---
 layout: member
 category: researcher
-title: 장재원
-image: jaewon.jpg
-role: PhD Student
-permalink: 'team/jaewon'
+title: 김진영
+image: jinyoung.jpg
+role: Researcher
+permalink: 'team/jinyoung'
 social:
     twitter: https://twitter.com/
     linkedin: https://www.linkedin.com/

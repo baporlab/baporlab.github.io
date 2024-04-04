@@ -1,10 +1,10 @@
 ---
 layout: member
 category: researcher
-title: 김진영
-image: jinyoung.jpg
+title: 윤홍철
+image: hongchul.jpg
 role: MS Student
-permalink: 'team/jinyoung'
+permalink: 'team/hongchul'
 social:
     twitter: https://twitter.com/
     linkedin: https://www.linkedin.com/

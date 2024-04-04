@@ -64,7 +64,7 @@ permalink: /team/
         </div>
     </div>
     {% assign number_displayed = number_displayed | plus: 1 %}
-    {% if remainder == 2 %}
+    {% if remainder == 2 or forloop.last%}
         </div>
     {% endif %}
 {% endfor %}
