@@ -1,21 +1,41 @@
-- date: 05/09/19
-  title: "Another great thing"
+- date: "2024.07.01"
+  headline: 하계 인턴십 시작! <br> 윤예린, 신호진 학생 환영합니다!
+  title: "하계 인턴십 시작"
   tags:
-    - some
-    - tags
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Eu turpis egestas pretium aenean. Luctus venenatis lectus magna fringilla
-    urna porttitor. Lorem ipsum dolor sit amet. Pellentesque massa placerat
-    duis ultricies. Commodo viverra maecenas accumsan lacus vel.
+    - Internship
+  content: 제6회
 
-- date: 03/09/19
-  title: "Something great"
+- date: "2024.06.24"
+  headline: 김동규 박사과정, 한국연구재단 <br> 박사과정생 연구장려금지원사업 선정
   tags:
-    - some
-    - tags
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Eu turpis egestas pretium aenean. Luctus venenatis lectus magna fringilla
-    urna porttitor. Lorem ipsum dolor sit amet. Pellentesque massa placerat
-    duis ultricies. Commodo viverra maecenas accumsan lacus vel.
+    - award
+  content: 
+
+- date: "2024.06.23"
+  headline: 김동규 박사과정, 서울대학교병원 & MIT 주최 'Korea Clinical Datathon 2024' 최우수상 수상
+  tags:
+    - award
+  content: 
+
+- date: "2024.05.31"
+  headline: 보건복지부 응급실 특화 AI 과제 선정, <br> 24년에서 28년까지 수행
+  tags:
+    - Project
+  content:
+
+- date: "2024.04.30"
+  headline: NIPA 고성능컴퓨팅 지원 과제 선정 <br> 2024년 H100 6대 확보
+  tags:
+    - Project
+  content:
+
+- date: "2024.04.03"
+  headline: |
+    <a href="https://www.nature.com/articles/s41598-024-59362-3">'Correlations between heart sound components and hemodynamic variables'</a>
+    논문 'Scientific Reports'에 게재
+
+- date: "2024.02.07"
+  headline: 서울아산병원 디지털심장병원추진단 심포지엄에서 <br> 수술장 생체신호 수합 시스템 개발 현황 발표
+  tags:
+    - Presentation
+  content:

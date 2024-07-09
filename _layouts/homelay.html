@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
-<div id="homeid" class="col-sm-12">
+<div id="homeid" class="col-md-8">
+    <h1>Welcome to BAPOR Lab</h1>
+
 	<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover" >
 		<!-- Menu -->
 		<ol class="carousel-indicators">
@@ -10,16 +12,16 @@ layout: default
 		</ol>
 
 		<!-- Items -->
-		<div class="carousel-inner">
-			<div class="carousel item active">
+		<div class="carousel-inner" markdown="0">
+			<div class="item active">
 				<img src="{{ site.url }}{{ site.baseurl }}/images/slider/lab-people.png" alt="Slide 1"
-				     class="d-block w-100"
-				     style="margin: auto; height: 400px; width: auto; object-fit: cover;"/>
+					 class="d-block w-100"
+					 style="margin: auto; height: 400px; width: auto; object-fit: cover;" />
 			</div>
-			<div class="carousel item">
+			<div class="item">
 				<img src="{{ site.url }}{{ site.baseurl }}/images/slider/lab-people2.png" alt="Slide 2"
 					 class="d-block w-100"
-				     style="margin: auto; height: 400px; width: auto; object-fit: cover;"/>
+					 style="margin: auto; height: 400px; width: auto; object-fit: cover;" />
 			</div>
 		</div>
 		<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
@@ -31,7 +33,8 @@ layout: default
 		<span class="sr-only">Next</span>
 		</a>
 	</div>
-
 	{{ content }}
-	<div style="margin: 40px;"></div>
+</div>
+<div id="newsid" class="col-sm-4">
+	{% include news.html %}
 </div>
