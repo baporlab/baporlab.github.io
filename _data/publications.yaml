@@ -1,5 +1,72 @@
-# DO NOT EDIT, GENERATED AUTOMATICALLY
-
+- id: doi:10.3390/jpm14060587
+  title: Internal and External Validation of Machine Learning Models for Predicting Acute Kidney Injury Following Non-Cardiac Surgery Using Open Datasets
+  authors:
+  - Sang-Wook Lee
+  - Jaewon Jang
+  - Woo-Young Seo
+  - Donghee Lee
+  - Sung-Hoon Kim
+  publisher: Journal of Personalized Medicine
+  date: '2024-05-30'
+  link: https://doi.org/10.3390/jpm14060587
+- id: doi:10.1038/s41598-024-59362-3
+  title: Correlations between heart sound components and hemodynamic variables
+  authors:
+  - Yong-Seok Park
+  - Hyun-Seok Kim
+  - Seung-Ah Lee
+  - Gyu-Sam Hwang
+  - Woosuk Jung
+  - Baehun Moon
+  - Kyu-Min Kang
+  - Woo-Young Seo
+  - Jun-Gol Song
+  - Sung-Hoon Kim
+  publisher: Scientific Reports
+  date: '2024-04-13'
+  link: https://doi.org/10.1038/s41598-024-59362-3
+- id: doi:10.4097/kja.23433
+  title: Frequency domain analysis of photoplethysmographic and arterial pressure waveforms 
+    for assessing hemodynamics in children with congenital heart surgery
+  authors:
+  - Hwa-Young Jang
+  - In-Kyung Song
+  - Sung-Hoon Kim
+  - Won-Jung Shin
+  publisher: Korean Journal of Anesthesiology
+  date: '2024-04-01'
+  link: https://doi.org/10.4097/kja.23433
+- id: doi:10.1097/JS9.0000000000001331
+  title: Effect of dexmedetomidine on the incidence of postoperative acute kidney injury 
+    in living donor liver transplantation recipients: A randomized controlled trial
+  authors:
+  - Hye-Mee Kwon
+  - Sa-jin Kang
+  - Sang-Bin Han
+  - Jae Hwan Kim
+  - Sung-Hoon Kim
+  - In-Gu Jun
+  - Jun-Gol Song
+  - Gyu-Sam Hwang
+  publisher: International Journal of Surgery
+  date: '2024-03-28'
+  link: https://doi.org/10.1097/JS9.0000000000001331
+- id: doi:10.1016/j.compbiomed.2023.107532
+  title: Enhancing the performance of premature ventricular contraction detection 
+    in unseen datasets through deep learning with denoise and contrast attention module
+  authors:
+  - Keewon Shin
+  - Hyunjung Kim
+  - Woo-Young Seo
+  - Hyun-Seok Kim
+  - Jae-Man Shin
+  - Dong-Kyu Kim
+  - Yong-Seok Park
+  - Sung-Hoon Kim
+  - Namkug Kim
+  publisher: Computers in Biology and Medicine
+  date: '2023-11-01'
+  link: https://doi.org/10.1016/j.compbiomed.2023.107532
 - id: doi:10.1016/j.ahj.2023.04.005
   title: 'Left ventricular remodeling in end-stage liver disease and post-transplant
     mortality assessed using end-diastolic pressure-volume relation analysis: Observational
@@ -60,6 +127,20 @@
   publisher: Computer Methods and Programs in Biomedicine
   date: '2023-05-01'
   link: https://doi.org/gsbwjc
+- id: doi:10.1016/j.exger.2022.112068
+  title: Association of C-reactive protein to albumin ratio with postoperative delirium
+    and mortality in elderly patients undergoing hip fracture surgery: A retrospective
+    cohort study in a single large center
+  authors:
+  - Ha-Jung Kim
+  - Sooho Lee
+  - Sung-Hoon Kim
+  - Sangho Lee
+  - Ji-Hoon Sim
+  - Young-Jin Ro
+  publisher: Experimental Gerontology
+  date: '2023-02-01'
+  link: https://doi.org/gsbwjf
 - id: doi:10.1109/TNNLS.2023.3273187
   title: Intraoperative Hypotension Prediction Based on Features Automatically Generated
     Within an Interpretable Deep Learning Model
@@ -73,20 +154,6 @@
   publisher: IEEE Transactions on Neural Networks and Learning Systems
   date: '2023-01-01'
   link: https://doi.org/gsbwjd
-- id: doi:10.1016/j.exger.2022.112068
-  title: 'Association of C-reactive protein to albumin ratio with postoperative delirium
-    and mortality in elderly patients undergoing hip fracture surgery: A retrospective
-    cohort study in a single large center'
-  authors:
-  - Ha-Jung Kim
-  - Sooho Lee
-  - Sung-Hoon Kim
-  - Sangho Lee
-  - Ji-Hoon Sim
-  - Young-Jin Ro
-  publisher: Experimental Gerontology
-  date: '2023-02-01'
-  link: https://doi.org/gsbwjf
 - id: doi:10.1002/jhbp.1163
   title: 'Association between red blood cell distribution width and blood transfusion 
     in patients undergoing living donor liver transplantation: Propensity score analysis'
