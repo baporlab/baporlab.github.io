@@ -1,5 +1,10 @@
 - date: "2024.07.01"
-  headline: 하계 인턴십 시작! <br> 윤예린, 신호진 학생 환영합니다!
+  headline: |
+    울산의대 대학원 
+    <a href="http://amist.ac.kr/sub5_1.html?m=v&idx=2460&pNo=1&s_part=%EC%97%B0%EA%B5%AC%EC%B2%B4%ED%97%98%EC%9D%B8%ED%84%B4%EC%8B%AD">
+      연구체험 인턴십 
+    </a>
+    시작! <br> 윤예린, 신호진 학생 환영합니다!
   title: "하계 인턴십 시작"
   tags:
     - Internship
@@ -12,7 +17,11 @@
   content: 
 
 - date: "2024.06.23"
-  headline: 김동규 박사과정, 서울대학교병원 & MIT 주최 'Korea Clinical Datathon 2024' 최우수상 수상
+  headline: |
+    김동규 박사과정, 서울대학교병원 & MIT 주최 
+    <a href="https://news.amc.seoul.kr/news/con/detail.do?cntId=9908&pressChk=">
+      'Korea Clinical Datathon 2024' 최우수상 수상
+    </a>
   tags:
     - award
   content: 
@@ -31,11 +40,18 @@
 
 - date: "2024.04.03"
   headline: |
-    <a href="https://www.nature.com/articles/s41598-024-59362-3">'Correlations between heart sound components and hemodynamic variables'</a>
+    <a href="https://www.nature.com/articles/s41598-024-59362-3">
+      'Correlations between heart sound components and hemodynamic variables'
+    </a>
     논문 'Scientific Reports'에 게재
 
 - date: "2024.02.07"
-  headline: 수술장 환자감시 및 회복실 데이터 관리, <br> 서울아산병원 디지털심장병원추진단 심포지엄에서 발표
+  headline: |
+    수술장 환자감시 및 회복실 데이터 관리, <br> 
+    <a href="https://news.amc.seoul.kr/news/con/detail.do?cntId=9586&pressChk=">
+      서울아산병원 디지털심장병원추진단 심포지엄
+    </a>
+    에서 발표
   tags:
     - Presentation
   content:
