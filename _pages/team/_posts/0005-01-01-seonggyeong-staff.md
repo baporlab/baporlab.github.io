@@ -1,6 +1,6 @@
 ---
 layout: member
-category: staff
+category: alumni
 title: 장성경
 image: seonggyeong.jpg
 role: Administrative Staff

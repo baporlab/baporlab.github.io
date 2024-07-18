@@ -1,6 +1,6 @@
 ---
 layout: member
-category: researcher
+category: staff
 title: 김은희
 image: eunhee.jpg
 role: Clinical Research Coordinator
