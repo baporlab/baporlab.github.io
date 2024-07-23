@@ -1,3 +1,14 @@
+- date: "2024.07.22"
+  headline: |
+    <a href="https://jkms.org/DOIx.php?id=10.3346/jkms.2024.39.e241">
+      'Impact of Preanesthetic Blood Pressure Deviations on 30-Day Postoperative Mortality in Non-Cardiac Surgery Patients'
+    </a>
+    논문 'J Korean Med Sci'에 게재
+  title: "마취 혈압 변화가 수술 후 30일 사망률에 미치는 영향 논문 게재"
+  tags:
+    - Publication
+  content: 
+
 - date: "2024.07.01"
   headline: |
     울산의대 대학원 
@@ -8,7 +19,7 @@
   title: "하계 인턴십 시작"
   tags:
     - Internship
-  content: 제6회
+  content:
 
 - date: "2024.06.24"
   headline: 김동규 박사과정, 한국연구재단 <br> 박사과정생 연구장려금지원사업 선정
@@ -44,6 +55,9 @@
       'Correlations between heart sound components and hemodynamic variables'
     </a>
     논문 'Scientific Reports'에 게재
+  tags:
+    - Publication
+  content:
 
 - date: "2024.02.07"
   headline: |

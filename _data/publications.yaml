@@ -1,3 +1,18 @@
+- id: doi:10.3346/jkms.2024.39.e241
+  title: 'Impact of Preanesthetic Blood Pressure Deviations on 30-Day Postoperative Mortality in Non-Cardiac Surgery Patients'
+  authors:
+  - Sang-Wook Lee
+  - Seongyong Park
+  - Jin-Young Kim 
+  - Baehun Moon
+  - Donghee Lee
+  - Jaewon Jang
+  - Woo-Young Seo
+  - Hyun-Seok Kim
+  - Sung-Hoon Kim
+  - Jiyeon Sim
+  publisher: Journal of Personalized Medicine
+  date: '2024-05-30'
 - id: doi:10.3390/jpm14060587
   title: 'Internal and External Validation of Machine Learning Models for Predicting Acute Kidney Injury Following Non-Cardiac Surgery Using Open Datasets'
   authors:
