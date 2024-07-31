@@ -22,7 +22,12 @@
   content:
 
 - date: "2024.06.24"
-  headline: 김동규 박사과정, 한국연구재단 <br> 박사과정생 연구장려금지원사업 선정
+  headline: |
+    김동규 박사과정, 한국연구재단 <br>  
+    <a href="https://news.amc.seoul.kr/news/con/detail.do?cntId=9945">
+      박사과정생 연구장려금지원사업
+    </a> 
+    선정
   tags:
     - award
   content: 
