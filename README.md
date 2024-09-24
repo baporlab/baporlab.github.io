@@ -1,10 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/dcf3d5d0-a4a4-486f-bd9a-64b612392aad/deploy-status)](https://app.netlify.com/sites/brave-bell-c85a34/deploys)
-
-# Research lab website template
-
-This website is built with [Jekyll](https://jekyllrb.com/).
-It is derived from the great template provided by the
-[Allan Lab](https://www.allanlab.org/aboutwebsite.html), at Leiden University.
+[![pages-build-deployment](https://github.com/baporlab/baporlab.github.io/actions/workflows/pages/pages-build-deployment/badge.svg?branch=master)](https://github.com/baporlab/baporlab.github.io/actions/workflows/pages/pages-build-deployment)
 
 ## Setup
 
@@ -39,11 +33,11 @@ Each new member `.md` file must look like this:
 ``` yaml
 ---
 layout: member
-category: staff
-title: Researcher Name
-image: researcher.png
-role: Lab Director
-permalink: 'team/researcher-name'
+category: professor
+title: 김성훈
+image: sunghoon.png
+role: Team Director
+permalink: 'team/sunghoon'
 social:
     twitter: https://twitter.com/
     linkedin: https://www.linkedin.com/
@@ -55,52 +49,38 @@ social:
 education:
  - Education
 ---
+Bio
+---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-cupidatat non proident, sunt in culpa qui officia deserunt
-mollit anim id est laborum.
 ```
 
 ### Add a new publication
 
-Publications are stored as `.json` file under
-[_data/publications.json](_data/publications.json).
-This json file is exported from [Zotero](https://www.zotero.org/)
+Publications are stored as `.yaml` file under
+[_data/publications.yaml](_data/publications.yaml).
+This yaml file is exported from [Zotero](https://www.zotero.org/)
 bibliography tool.
 
 Just add a new entry to the list like this:
 
-``` json
-{
-  "id": "http://zotero.org/groups/2386072/items/NU9LTX7C",
-  "type": "article-journal",
-  "title": "Foo",
-  "container-title": "IEEE Transactions on Medical Imaging",
-  "page": "448-459",
-  "volume": "38",
-  "issue": "2",
-  "source": "IEEE Xplore",
-  "abstract": "Bar",
-  "DOI": "10.1109/TMI.2018.2865709",
-  "author": [
-    {
-      "family": "",
-      "given": ""
-    },
-  ],
-  "issued": {
-    "date-parts": [
-      [
-        "2019",
-        2
-      ]
-    ]
-  }
-}
+```yaml
+- id: doi:10.1038/s41598-024-59362-3
+  title: 'Correlations between heart sound components and hemodynamic variables'
+  authors:
+  - Yong-Seok Park
+  - Hyun-Seok Kim
+  - Seung-Ah Lee
+  - Gyu-Sam Hwang
+  - Woosuk Jung
+  - Baehun Moon
+  - Kyu-Min Kang
+  - Woo-Young Seo
+  - Jun-Gol Song
+  - Sung-Hoon Kim
+  publisher: Scientific Reports
+  date: '2024-04-13'
+  link: https://doi.org/10.1038/s41598-024-59362-3
 ```
 
 ### Add news
@@ -110,16 +90,14 @@ News are stored as `.yml` file under [_data/news.yml](_data/news.yml).
 An entry looks like the following:
 
 ```yaml
-- date: 03/09/19
-  title: "Something great"
+- date: "2024.04.03"
+  headline: |
+    <a href="https://www.nature.com/articles/s41598-024-59362-3">
+      'Correlations between heart sound components and hemodynamic variables'
+    </a>
+    논문 'Scientific Reports'에 게재
   tags:
-    - some
-    - tags
-  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Eu turpis egestas pretium aenean. Luctus venenatis lectus magna fringilla
-    urna porttitor. Lorem ipsum dolor sit amet. Pellentesque massa placerat
-    duis ultricies. Commodo viverra maecenas accumsan lacus vel.
+    - Publication
 ```
 
 ### Edit template
@@ -127,3 +105,10 @@ An entry looks like the following:
 We use [Bootstrap](https://getbootstrap.com/) for designing the website.
 Feel free to modify either the [_pages](_pages/) or the
 [_layouts](_layouts/) components.
+
+
+# Research lab website template
+This website is built with [Jekyll](https://jekyllrb.com/).
+It is derived from the great template originally created by the
+[Allan Lab](https://www.allanlab.org/aboutwebsite.html), at Leiden University and
+subsequently modified by [ericdaat](https://github.com/ericdaat/research-lab-website)
