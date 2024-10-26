@@ -1,0 +1,103 @@
+---
+title: "Team"
+layout: default
+excerpt: "BAPOR Lab -- team"
+sitemap: false
+permalink: /team/
+---
+
+<h1>{{page.title}}</h1>
+
+<!-- professor -->
+
+<h2><a id="professor"></a>Professor</h2>
+{% assign number_printed = 0 %}
+{% assign team_members = site.data.team_members | where: 'info', 'professor' %}
+{% for member in team_members %}
+    {% assign remainder = number_printed | modulo: 3 %}
+    {% if remainder == 0 %}
+        <div class="row mt-3">
+    {% endif %}
+    <div class="card team-member-card">
+        <div class="col-md-2">
+                <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.photo }}"
+                    class="card-img img-responsive img-thumbnail"
+                    style="max-width: 100px; object-fit: cover; height: 15rem;"/>
+                <div class="card-body">
+                <h4 class="card-title">{{ member.name }}</h4>
+                <p class="card-text">{{ member.role }}</p>
+                </div>
+        </div>
+    </div>
+    {% assign number_printed = number_printed | plus: 1 %}
+    {% if remainder == 2 %}
+        </div>
+    {% endif %}
+{% endfor %}
+{% assign remainder = number_printed | modulo: 3 %}
+{% if remainder == 2 %}
+</div>
+{% endif %}
+
+
+<!-- Researcher -->
+
+<h2><a id="researcher"></a>Researcher</h2>
+{% assign number_printed = 0 %}
+{% assign team_members = site.data.team_members | where: 'info', 'researcher' %}
+{% for member in team_members %}
+    {% assign remainder = number_printed | modulo: 3 %}
+    {% if remainder == 0 %}
+        <div class="row mt-3">
+    {% endif %}
+    <div class="card team-member-card">
+        <div class="col-md-2">
+                <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.photo }}"
+                    class="card-img img-responsive img-thumbnail"
+                    style="max-width: 100px; object-fit: cover; height: 15rem;"/>
+                <div class="card-body">
+                <h4 class="card-title">{{ member.name }}</h4>
+                <p class="card-text">{{ member.role }}</p>
+                </div>
+        </div>
+    </div>
+    {% assign number_printed = number_printed | plus: 1 %}
+    {% if remainder == 2 or forloop.last %}
+        </div>
+    {% endif %}
+{% endfor %}
+{% assign remainder = number_printed | modulo: 3 %}
+{% if remainder == 2 %}
+</div>
+{% endif %}
+
+<!-- Staff -->
+
+<h2><a id="staff"></a>Staff</h2>
+{% assign number_printed = 0 %}
+{% assign team_members = site.data.team_members | where: 'info', 'staff' %}
+{% for member in team_members %}
+    {% assign remainder = number_printed | modulo: 3 %}
+    {% if remainder == 0 %}
+        <div class="row mt-3">
+    {% endif %}
+    <div class="card team-member-card">
+        <div class="col-md-2">
+                <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.photo }}"
+                    class="card-img img-responsive img-thumbnail"
+                    style="max-width: 100px; object-fit: cover; height: 15rem;"/>
+                <div class="card-body">
+                <h4 class="card-title">{{ member.name }}</h4>
+                <p class="card-text">{{ member.role }}</p>
+                </div>
+        </div>
+    </div>
+    {% assign number_printed = number_printed | plus: 1 %}
+    {% if remainder == 2 %}
+        </div>
+    {% endif %}
+{% endfor %}
+{% assign remainder = number_printed | modulo: 3 %}
+{% if remainder == 2 %}
+</div>
+{% endif %}

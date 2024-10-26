@@ -1,0 +1,72 @@
+- name: 김성훈
+  photo: sunghoon.png
+  info: professor
+  role: Team Director
+  email: shkimans@gmail.com
+- name: 박용석
+  photo: yongseok.png
+  info: professor
+  role: MD/Assistant Professor
+  email: yongseokPark@gmail.com
+- name: 이상욱
+  photo: sangwook.png
+  info: professor
+  role: MD/Assistant Professor
+  email: sangwook@gmail.com
+
+- name: 서우영
+  photo: wooyoung.png
+  info: researcher
+  role: Postdoctoral Researcher
+- name: 김현석
+  photo: hyunseok.jpg
+  info: researcher
+  role: Research Professor
+- name: 허창회
+  photo: changhoe.jpg
+  info: researcher
+  role: Researcher
+
+- name: 강규민
+  photo: kyumin.jpg
+  info: researcher
+  role: Ph.D. Student
+- name: 신재만
+  photo: jaeman.jpg
+  info: researcher
+  role: Ph.D. Student
+- name: 김동규
+  photo: dongkyu.jpg
+  info: researcher
+  role: Ph.D. Student
+- name: 윤홍철
+  photo: hongchul.jpg
+  info: researcher
+  role: M.S. Student
+- name: 최정훈
+  photo: junghoon.png
+  info: researcher
+  role: M.S. Student
+- name: 김정환
+  photo: junghwan.jpg
+  info: researcher
+  role: Researcher
+- name: 김창우
+  photo: changwoo.jpg
+  info: researcher
+  role: Researcher
+- name: 윤예린
+  photo: yerin.jpg
+  info: researcher
+  role: Researcher
+- name: 김진영
+  photo: jinyoung.jpg
+  info: researcher
+  role: Researcher
+
+- name: 김지혜
+  photo: jihye.jpeg
+  info: staff
+  role: Administrative Staff
+
+
