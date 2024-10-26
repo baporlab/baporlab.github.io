@@ -25,7 +25,7 @@ permalink: /team/
                     style="max-width: 100px; object-fit: cover; height: 15rem;"/>
                 <div class="card-body">
                 <h4 class="card-title">{{ member.name }}</h4>
-                <p class="card-text">{{ member.role }}</p>
+                <p class="card-text">{{ member.role | replace: '/', '<br>' }}</p>
                 </div>
         </div>
     </div>

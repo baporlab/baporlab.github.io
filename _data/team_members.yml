@@ -1,17 +1,17 @@
 - name: 김성훈
   photo: sunghoon.png
   info: professor
-  role: Team Director
+  role: Team Director/Associate professor
   email: shkimans@gmail.com
 - name: 박용석
   photo: yongseok.png
   info: professor
-  role: MD/Assistant Professor
+  role: Associate Professor
   email: yongseokPark@gmail.com
 - name: 이상욱
   photo: sangwook.png
   info: professor
-  role: MD/Assistant Professor
+  role: Assistant Professor
   email: sangwook@gmail.com
 
 - name: 서우영
