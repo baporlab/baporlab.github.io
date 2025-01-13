@@ -43,10 +43,10 @@
   photo: hongchul.jpg
   info: researcher
   role: M.S. Student
-- name: 최정훈
-  photo: junghoon.png
+- name: 윤예린
+  photo: yerin.jpg
   info: researcher
-  role: M.S. Student
+  role: Researcher
 - name: 김정환
   photo: junghwan.jpg
   info: researcher
@@ -55,8 +55,12 @@
   photo: changwoo.jpg
   info: researcher
   role: Researcher
-- name: 윤예린
-  photo: yerin.jpg
+- name: 최수호
+  photo: soohochoi.jpg
+  info: researcher
+  role: Researcher
+- name: 유형선
+  photo: hyungsun.jpg
   info: researcher
   role: Researcher
 - name: 김진영
