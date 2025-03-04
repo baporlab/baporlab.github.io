@@ -11,7 +11,7 @@
 - name: 이상욱
   photo: sangwook.png
   info: professor
-  role: Assistant Professor
+  role: Associate Professor
   email: sangwook@gmail.com
 
 - name: 서우영
@@ -26,7 +26,11 @@
   photo: changhoe.jpg
   info: researcher
   role: Researcher
-
+- name: 김우진
+  photo: woojin.jpg
+  info: researcher
+  role: MD-Ph.D. Student
+  
 - name: 강규민
   photo: kyumin.jpg
   info: researcher
@@ -46,7 +50,7 @@
 - name: 윤예린
   photo: yerin.jpg
   info: researcher
-  role: Researcher
+  role: M.S. Student
 - name: 김정환
   photo: junghwan.jpg
   info: researcher
@@ -59,6 +63,7 @@
   photo: soohochoi.jpg
   info: researcher
   role: Researcher
+  
 - name: 유형선
   photo: hyungsun.jpg
   info: researcher
