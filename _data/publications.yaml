@@ -184,8 +184,8 @@
   publisher: Journal of Hepato‐Biliary‐Pancreatic Sciences
   date: "2022-04-24"
 - id: doi:10.1002/lt.26447
-  title: Associations of sarcopenia with graft failure and mortality in patients undergoing living donor liver transplantation
-  authors: 
+  title: 'Associations of sarcopenia with graft failure and mortality in patients undergoing living donor liver transplantation'
+  authors:
   - Ji-Hoon Sim
   - Hye-Mee Kwon
   - Kyung-Won Kim
@@ -199,7 +199,7 @@
   publisher: Liver Translation
   date: "2022-03-04"
 - id: doi:10.3390/s21206757
-  title: eart and lung sound measurement using an esophageal stethoscope with adaptive noise cancellation
+  title: 'Heart and lung sound measurement using an esophageal stethoscope with adaptive noise cancellation'
   authors:
   - Nourelhuda Mohamed
   - Hyun-Seok Kim
@@ -211,8 +211,7 @@
   date: '2021-10-21'
   link: https://doi.org/10.3390/s21206757
 - id: doi:10.1007/s10877-020-00595-8
-  title: Non-contact thermography-based respiratory rate monitoring in a post-anesthetic
-    care unit
+  title: 'Non-contact thermography-based respiratory rate monitoring in a post-anesthetic care unit'
   authors:
   - Hye-Mee Kwon
   - Keita Ikeda
