@@ -11,6 +11,21 @@
   - Sung-Hoon Kim
   publisher: Biomedical Engineering Letters
   date: '2025-05-30'
+-id: doi:10.1016/j.cmpb.2025.108871
+  title: 'Temporal convolutional neural network-based feature extraction and asynchronous channel information fusion method for heart abnormality detection in phonocardiograms'
+  authors:
+  - Jae-Man Shin
+  - Seongyong Park
+  - Keewon Shin
+  - Woo-Young Seo
+  - Hyun-Seok Kim
+  - Dong-Kyu Kim
+  - Baehun Moon
+  - Seul-Gi Cha 
+  - Won-Jung Shin
+  - Sung-Hoon Kim
+  publisher: Computer Methods and Programs in Biomedicine
+  date: '2025-05-01'
 - id: doi:10.3346/jkms.2024.39.e241
   title: 'Impact of Preanesthetic Blood Pressure Deviations on 30-Day Postoperative Mortality in Non-Cardiac Surgery Patients'
   authors:
