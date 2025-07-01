@@ -8,13 +8,14 @@
   tags:
     - Publication
   content: 
+  
 - date: "2025.05.01"
   headline: |
     <a href="https://doi.org/10.1016/j.cmpb.2025.108871">
       'Temporal convolutional neural network-based feature extraction and asynchronous channel information fusion method for heart abnormality detection in phonocardiograms'
     </a>
     논문 'Computer Methods and Programs in Biomedicine'에 게재
-  title: "심잡음 분류 논문 게재"
+  title: "비동기적으로 수집된 다채널 심음도에서 심장이상 탐지 모델 개발 논문 게재"
   tags:
     - Publication
   content: 
