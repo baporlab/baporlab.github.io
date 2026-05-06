@@ -1,3 +1,33 @@
+- id: doi:10.1088/1361-6579/ae4cee
+  title: 'Deep learning approach for stroke volume variation estimation: retrospective modeling and prospective deployment in real-world practice'
+  authors:
+  - Jae-Man Shin
+  - Woo-Young Seo
+  - Woo-Jin Kim
+  - Changwoo Kim
+  - Junik Park
+  - Hyun-Seok Kim
+  - Sung-Hoon Kim
+  publisher: Physiological Measurement
+  date: '2026-04-01'
+- id: doi:10.1088/1361-6579/ae4cee
+  title: 'Exploratory clinical trial on the acoustic variability index for predicting fluid responsiveness during hepatectomy'
+  authors:
+  - Woo-Young Seo
+  - Hye-Mee Kwon
+  - Baehun Moon
+  - Hyun-Seok Kim
+  - Kyu-Min Kang
+  - Chang-Hoe Heo
+  - Gil-Chun Park
+  - Ji-Jung Park
+  - Sung-Hoon Kim
+  - In-Gu Jun
+  - Jun-Gol Song
+  - Gyu-Sam Hwang 
+  publisher: Journal of Clinical Monitoring and Computing
+  date: '2026-03-09'
+
 - id: doi:10.1007/s13534-025-00527-y
   title: 'Development of an intraoperative acoustic lung monitoring system for real-time respiratory rate detection in patient receiving mechanical ventilation'
   authors:
