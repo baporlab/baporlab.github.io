@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import { getPublications, doiUrl } from '../lib/data';
+
+const pubs = (await getPublications()).filter((p) => p.title);
+const byYear = new Map<number, typeof pubs>();
+for (const p of pubs) {
+  const y = p.date?.getUTCFullYear() ?? 0;
+  if (!byYear.has(y)) byYear.set(y, []);
+  byYear.get(y)!.push(p);
+}
+const years = [...byYear.keys()].sort((a, b) => b - a);
+---
+<Base title="Publications">
+  <h1>Publications <span class="pub-count">({pubs.length})</span></h1>
+  <nav class="year-nav" aria-label="연도별 이동">
+    {years.map((y) => <a href={`#y${y}`}>{y || '연도 미상'}</a>)}
+  </nav>
+  {years.map((y) => (
+    <section>
+      <h2 id={`y${y}`}>{y || '연도 미상'}</h2>
+      <ol class="pub-list">
+        {byYear.get(y)!.map((p) => (
+          <li class="pub">
+            <div class="pub-title">{p.title}</div>
+            {p.authors.length > 0 && <div class="pub-authors">{p.authors.join(', ')}</div>}
+            <div class="pub-venue">
+              {p.journal && <span class="journal">{p.journal}</span>}
+              {p.date && <> ({p.date.getUTCFullYear()})</>}
+              {' · '}<a href={doiUrl(p.doi)} target="_blank" rel="noopener">doi:{p.doi}</a>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  ))}
+</Base>

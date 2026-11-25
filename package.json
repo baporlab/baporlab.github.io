@@ -1,0 +1,17 @@
+{
+  "name": "baporlab-site",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "node scripts/check-content.mjs && astro build",
+    "preview": "astro preview",
+    "fill-doi": "node scripts/fill-doi.mjs",
+    "check": "node scripts/check-content.mjs"
+  },
+  "dependencies": {
+    "astro": "^7.4.13",
+    "marked": "^18.3.0",
+    "yaml": "^2.9.1"
+  }
+}

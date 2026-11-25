@@ -1,0 +1,19 @@
+---
+import { CATEGORY_LABEL, fmtDate, type FeedItem } from '../lib/data';
+interface Props { items: FeedItem[]; compact?: boolean }
+const { items, compact = false } = Astro.props;
+---
+<ul class="news-list">
+  {items.map((n) => (
+    <li>
+      <div class="news-meta">
+        <time datetime={n.date.toISOString().slice(0, 10)}>{fmtDate(n.date)}</time>
+        <span class="tag">{CATEGORY_LABEL[n.category] ?? '소식'}</span>
+      </div>
+      <div class="news-title">
+        {n.link ? <a href={n.link} target="_blank" rel="noopener">{n.title}</a> : n.title}
+      </div>
+      {!compact && n.html && <div class="news-body" set:html={n.html} />}
+    </li>
+  ))}
+</ul>

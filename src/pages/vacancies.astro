@@ -1,0 +1,10 @@
+---
+import Base from '../layouts/Base.astro';
+import { getSettings, md } from '../lib/data';
+const { site } = await getSettings();
+---
+<Base title="Join us">
+  <h1>Join us</h1>
+  <div class="prose" set:html={md(site.vacancies)} />
+  {site.email && <p>문의: <a href={`mailto:${site.email}`}>{site.email}</a></p>}
+</Base>
