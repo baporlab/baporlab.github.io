@@ -5,10 +5,10 @@ backend:
   name: github
   repo: baporlab/baporlab.github.io
   branch: master
-  # 행정 담당자가 "Sign in with GitHub" 버튼으로 로그인하려면
-  # Sveltia CMS Authenticator(Cloudflare Worker)를 배포한 뒤 그 주소를 아래에 넣습니다.
-  # 설정 방법은 README.md의 "관리 화면 로그인 설정"을 참고하세요.
-  # base_url: https://sveltia-cms-auth.<계정>.workers.dev
+  # 로그인: Sveltia CMS Additions (아이디/비밀번호 로그인, GitHub 계정 불필요)
+  # base_url은 Cloudflare에 배포한 Additions Worker 주소입니다. README.md 2-2 참고.
+  auth_type: additions
+  base_url: https://sveltia-cms-additions.khs0330kr.workers.dev
   commit_messages:
     create: "홈페이지: {{collection}} 추가 - {{slug}}"
     update: "홈페이지: {{collection}} 수정 - {{slug}}"

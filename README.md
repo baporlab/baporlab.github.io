@@ -12,8 +12,9 @@ https://baporlab.github.io
 
 ### 로그인
 1. https://baporlab.github.io/admin 에 접속합니다.
-2. **Sign in with GitHub** 버튼을 누르고, 본인 GitHub 계정으로 로그인합니다.
-   - 처음 한 번은 교수님이 GitHub 저장소에 초대해 주셔야 합니다. 초대 메일을 수락한 뒤 로그인하세요.
+2. 교수님께 받은 **아이디와 임시 비밀번호**로 로그인합니다. GitHub 계정은 필요 없습니다.
+3. 처음 로그인하면 본인이 쓸 비밀번호(12자 이상)를 새로 정합니다.
+   - 비밀번호를 잊어버렸다면 교수님께 재설정을 요청하세요.
 
 > 관리 화면의 버튼은 영어로 나옵니다. 자주 쓰는 버튼: **New**(새로 만들기), **Save**(저장), **Delete**(삭제)
 
@@ -58,24 +59,36 @@ https://baporlab.github.io
 저장소 **Settings → Pages → Build and deployment → Source**를 **GitHub Actions**로 바꿉니다.
 기존 Jekyll 방식("Deploy from a branch")에서 바꾸는 것입니다.
 
-### 2-2. 행정 담당자 초대
-1. 행정 담당자가 GitHub 계정을 만듭니다 (https://github.com/signup, 무료).
-2. 저장소 **Settings → Collaborators**(조직 저장소이면 **Collaborators and teams**)에서 그 계정을 **Write** 권한으로 초대합니다.
+### 2-2. 관리 화면 로그인 설정 (Sveltia CMS Additions)
+GitHub Pages에는 서버가 없어서, 로그인을 처리할 작은 서비스를 Cloudflare(무료)에 한 번 띄워야 합니다.
+**Cloudflare 계정은 설정하는 사람 한 명만** 있으면 됩니다. 행정 담당자에게는 Cloudflare 계정도 GitHub 계정도 필요 없습니다.
+자세한 내용은 공식 문서를 참고하세요: https://sveltiacms.app/en/docs/additions/setup
 
-### 2-3. 관리 화면 로그인 설정 (Sveltia CMS Authenticator)
-GitHub Pages에는 서버가 없습니다. 그래서 "Sign in with GitHub" 로그인을 대신 처리해 줄 작은 프로그램을 Cloudflare(무료)에 한 번 띄워야 합니다.
+1. **관리자 비밀키를 만듭니다.**
+   - 터미널에서 `openssl rand -base64 32`를 실행합니다.
+   - 나온 값은 **비밀번호 관리자에만** 보관합니다. 이 키를 가진 사람이 로그인 서비스 전체를 관리할 수 있습니다.
+2. **Worker를 배포합니다.**
+   - [Deploy 버튼](https://deploy.workers.cloudflare.com/?url=https://github.com/sveltia/sveltia-cms-additions/tree/main/templates/cloudflare)을 누릅니다.
+   - Cloudflare에 로그인한 뒤 `ADMIN_SECRET` 칸에 1번 값을 넣습니다.
+   - 이때 설정용 저장소가 배포하는 사람의 GitHub 계정에 복사됩니다.
+3. **Worker 주소를 켭니다.**
+   - Cloudflare 대시보드 → **Workers & Pages** → 해당 Worker → **Domains**에서 **Production URL**을 켭니다.
+   - 주소(예: `https://sveltia-cms-additions.xxxx.workers.dev`)를 [public/admin/config.yml](public/admin/config.yml)의 `base_url`에 넣습니다.
+4. **설정 마법사를 실행합니다.**
+   - https://baporlab.github.io/admin 에서 **Use Admin Secret**을 고르고 1번 비밀키를 넣습니다.
+   - ① 첫 관리자 계정을 만듭니다.
+   - ② GitHub App을 만든 뒤, **Only select repositories → baporlab.github.io 하나만** 선택해 설치합니다.
+5. **보안 체크리스트를 확인합니다.**
+   - Cloudflare와 GitHub 계정에 2단계 인증을 켭니다.
+   - 저장소에 기본 브랜치 강제 push·삭제 차단 규칙(ruleset)을 둡니다. 관리 화면 Administration → GitHub 항목에서도 경고로 알려줍니다.
+   - 관리 화면 Administration 페이지에 새 버전 알림이 뜨면 업데이트합니다. 배포자 계정에 복사된 저장소로 Dependabot PR이 오면 병합하면 됩니다.
 
-1. https://github.com/sveltia/sveltia-cms-auth 의 안내대로 **Deploy to Cloudflare** 버튼을 눌러 Worker를 만듭니다.
-   만들어진 주소(예: `https://sveltia-cms-auth.xxxx.workers.dev`)를 적어 둡니다.
-2. GitHub OAuth App을 만듭니다. 조직 **baporlab → Settings → Developer settings → OAuth Apps → New OAuth App**에서 아래처럼 입력합니다.
-   - Homepage URL: `https://baporlab.github.io`
-   - Authorization callback URL: `https://sveltia-cms-auth.xxxx.workers.dev/callback`
-3. Cloudflare Worker 설정 → **Variables**에 아래 값을 넣습니다.
-   - `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET`: 2번에서 만든 OAuth App의 값
-   - `ALLOWED_DOMAINS`: `baporlab.github.io`
-4. [public/admin/config.yml](public/admin/config.yml)의 `base_url` 줄 주석(`#`)을 지우고 1번의 Worker 주소를 넣습니다.
-
-> 이 설정 전에도 관리 화면은 쓸 수 있습니다. **Sign in with token**을 고르고 GitHub 개인 액세스 토큰을 넣는 방식인데, 개발자용이라 행정 담당자에게는 권하지 않습니다.
+### 2-3. 행정 담당자 계정 만들기
+1. 관리자 계정으로 https://baporlab.github.io/admin 에 로그인합니다.
+2. 상단 **Administration → Users → Add User**를 누릅니다.
+3. 아이디(영문 소문자), 이름, 역할 **Editor**를 입력합니다.
+4. 화면에 나온 **아이디와 임시 비밀번호**를 행정 담당자에게 전달합니다. 이메일이 있으면 **Email to** 버튼으로 바로 보낼 수 있습니다.
+5. 퇴사하거나 담당자가 바뀌면 삭제하지 말고 **Disable User**로 비활성화합니다. 비활성화하면 그 사람의 수정 권한이 즉시 취소됩니다.
 
 ---
 
