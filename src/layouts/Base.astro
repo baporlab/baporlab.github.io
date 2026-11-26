@@ -1,0 +1,73 @@
+---
+import '../styles/global.css';
+import { getSettings } from '../lib/data';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title, description } = Astro.props;
+const { site } = await getSettings();
+const siteName = site.name ?? 'BAPOR Lab';
+const pageTitle = title ? `${title} · ${siteName}` : siteName;
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+const nav = [
+  { href: '/', label: 'Home' },
+  { href: '/team/', label: 'Team' },
+  { href: '/research/', label: 'Research' },
+  { href: '/publications/', label: 'Publications' },
+  { href: '/news/', label: 'News' },
+  { href: '/vacancies/', label: 'Join us' },
+];
+const isActive = (href: string) => {
+  const h = href.replace(/\/$/, '') || '/';
+  return h === '/' ? path === '/' : path.startsWith(h);
+};
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description ?? 'Biosignal Analysis & Perioperative Outcome Research Laboratory'} />
+    <link rel="icon" href="/images/favicon.ico" />
+    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">{siteName}</a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="메뉴 열기" />
+        <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true"><span></span></label>
+        <nav class="site-nav">
+          {nav.map((n) => <a href={n.href} class={isActive(n.href) ? 'active' : undefined}>{n.label}</a>)}
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>
+          <img src="/images/logo/lab-logo.jpg" alt={`${siteName} logo`} class="footer-logo" />
+          <p class="muted">© {new Date().getFullYear()} {siteName}</p>
+        </div>
+        <div>
+          <p class="footer-label">Contact</p>
+          {site.address && <p>{site.address}</p>}
+          {site.email && <p><a href={`mailto:${site.email}`}>{site.email}</a></p>}
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

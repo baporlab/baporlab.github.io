@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import NewsList from '../components/NewsList.astro';
+import { getSettings, getNewsFeed, md } from '../lib/data';
+
+const { home } = await getSettings();
+const slides = home.slides ?? [];
+const news = (await getNewsFeed()).slice(0, 8);
+---
+<Base>
+  <div class="home-grid">
+    <section>
+      {slides.length > 0 && (
+        <div class="slider" data-slider>
+          {slides.map((s, i) => <img src={s.image} alt={`연구실 사진 ${i + 1}`} class={i === 0 ? 'on' : undefined} loading={i === 0 ? 'eager' : 'lazy'} />)}
+          {slides.length > 1 && (
+            <>
+              <button class="prev" type="button" aria-label="이전 사진">‹</button>
+              <button class="next" type="button" aria-label="다음 사진">›</button>
+              <div class="dots">{slides.map((_, i) => <span class={i === 0 ? 'on' : undefined} />)}</div>
+            </>
+          )}
+        </div>
+      )}
+      {home.headline && <p class="headline">{home.headline}</p>}
+      {home.subheadline && <p class="subheadline">{home.subheadline}</p>}
+      <div class="intro" set:html={md(home.intro)} />
+    </section>
+
+    <aside class="news-box">
+      <h2>News</h2>
+      <NewsList items={news} compact />
+      <a class="see-all" href="/news/">전체 소식 보기 →</a>
+    </aside>
+  </div>
+</Base>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-slider]').forEach((el) => {
+    const imgs = [...el.querySelectorAll('img')];
+    const dots = [...el.querySelectorAll('.dots span')];
+    if (imgs.length < 2) return;
+    let i = 0;
+    let timer: number;
+    const show = (n: number) => {
+      imgs[i].classList.remove('on'); dots[i]?.classList.remove('on');
+      i = (n + imgs.length) % imgs.length;
+      imgs[i].classList.add('on'); dots[i]?.classList.add('on');
+    };
+    const start = () => { clearInterval(timer); timer = window.setInterval(() => show(i + 1), 5000); };
+    el.querySelector('.prev')?.addEventListener('click', () => { show(i - 1); start(); });
+    el.querySelector('.next')?.addEventListener('click', () => { show(i + 1); start(); });
+    el.addEventListener('mouseenter', () => clearInterval(timer));
+    el.addEventListener('mouseleave', start);
+    start();
+  });
+</script>

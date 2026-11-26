@@ -1,0 +1,274 @@
+# BAPOR Lab 홈페이지 관리 화면(Sveltia CMS) 설정
+# 문서: https://github.com/sveltia/sveltia-cms
+
+backend:
+  name: github
+  repo: baporlab/baporlab.github.io
+  branch: master
+  # 행정 담당자가 "Sign in with GitHub" 버튼으로 로그인하려면
+  # Sveltia CMS Authenticator(Cloudflare Worker)를 배포한 뒤 그 주소를 아래에 넣습니다.
+  # 설정 방법은 README.md의 "관리 화면 로그인 설정"을 참고하세요.
+  # base_url: https://sveltia-cms-auth.<계정>.workers.dev
+  commit_messages:
+    create: "홈페이지: {{collection}} 추가 - {{slug}}"
+    update: "홈페이지: {{collection}} 수정 - {{slug}}"
+    delete: "홈페이지: {{collection}} 삭제 - {{slug}}"
+    uploadMedia: "홈페이지: 이미지 업로드 - {{path}}"
+    deleteMedia: "홈페이지: 이미지 삭제 - {{path}}"
+
+site_url: https://baporlab.github.io
+display_url: https://baporlab.github.io
+logo_url: /images/favicon.ico
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+collections:
+  # ───────────────────────── 논문 ─────────────────────────
+  - name: publications
+    label: 논문
+    label_singular: 논문
+    description: >-
+      DOI만 입력하고 저장하면 제목·저자·저널·날짜가 1~2분 안에 자동으로 채워집니다.
+      "홈 뉴스에 표시"를 켜 두면 홈 화면 News에도 자동으로 올라갑니다.
+    folder: src/content/publications
+    extension: yml
+    format: yml
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    identifier_field: doi
+    summary: "{{title}}"
+    sortable_fields:
+      fields: [date, title, journal]
+      default:
+        field: date
+        direction: descending
+    fields:
+      - name: doi
+        label: DOI
+        widget: string
+        hint: "예: 10.1007/s10877-026-01427-x  (https://doi.org/ 주소를 통째로 붙여넣어도 됩니다)"
+        pattern: ['^\s*(https?://(dx\.)?doi\.org/|doi:\s*)?10\.\d{4,9}/\S+\s*$', 'DOI 형식이 아닙니다. 10.으로 시작하는 DOI를 입력해 주세요.']
+      - name: news
+        label: 홈 뉴스에 표시
+        widget: boolean
+        default: true
+      - name: news_title
+        label: 뉴스 제목 (한글 요약, 선택)
+        widget: string
+        required: false
+        hint: "예: 수술 중 음향기반 실시간 폐 모니터링 시스템 논문 게재 — 비워두면 논문 제목이 그대로 뉴스 제목이 됩니다."
+      - name: title
+        label: 논문 제목 (자동 입력)
+        widget: string
+        required: false
+      - name: authors
+        label: 저자 (자동 입력)
+        widget: list
+        required: false
+        field: { name: author, label: 저자, widget: string }
+      - name: journal
+        label: 저널 (자동 입력)
+        widget: string
+        required: false
+      - name: date
+        label: 게재일 (자동 입력)
+        widget: datetime
+        required: false
+        format: YYYY-MM-DD
+        date_format: YYYY-MM-DD
+        time_format: false
+
+  # ───────────────────────── 뉴스 ─────────────────────────
+  - name: news
+    label: 뉴스
+    label_singular: 뉴스
+    description: 수상, 과제 선정, 입학 등 소식을 올립니다. 논문 게재 소식은 "논문" 메뉴에서 자동으로 만들어지므로 따로 쓰지 않아도 됩니다.
+    folder: src/content/news
+    extension: md
+    format: frontmatter
+    create: true
+    delete: true
+    slug: "{{year}}-{{month}}-{{day}}-{{uuid_short}}"
+    summary: "{{date}} · {{title}}"
+    sortable_fields:
+      fields: [date, title]
+      default:
+        field: date
+        direction: descending
+    fields:
+      - name: title
+        label: 제목
+        widget: string
+        hint: "예: 제25회 PhysioNet Challenge 디지털화 분야 2위 수상"
+      - name: date
+        label: 날짜
+        widget: datetime
+        format: YYYY-MM-DD
+        date_format: YYYY-MM-DD
+        time_format: false
+      - name: category
+        label: 분류
+        widget: select
+        default: etc
+        options:
+          - { label: 수상, value: award }
+          - { label: 과제, value: project }
+          - { label: 구성원 (입학·인턴 등), value: members }
+          - { label: 발표, value: presentation }
+          - { label: 논문, value: publication }
+          - { label: 기타 소식, value: etc }
+      - name: link
+        label: 관련 링크 (선택)
+        widget: string
+        required: false
+        hint: 제목을 누르면 열릴 주소입니다. 예) 보도자료, 행사 페이지
+      - name: body
+        label: 내용 (선택)
+        widget: markdown
+        required: false
+        minimal: true
+        buttons: [bold, italic, link, bulleted-list]
+        editor_components: []
+
+  # ───────────────────────── 구성원 ─────────────────────────
+  - name: members
+    label: 구성원
+    label_singular: 구성원
+    description: 졸업·퇴사한 분은 삭제하지 말고 "구분"을 "졸업생"으로 바꾸면 Alumni 목록으로 옮겨집니다.
+    folder: src/content/members
+    extension: yml
+    format: yml
+    create: true
+    delete: true
+    slug: "{{uuid_short}}"
+    identifier_field: name
+    summary: "{{name}} · {{role}}"
+    media_folder: /public/images/team
+    public_folder: /images/team
+    sortable_fields:
+      fields: [order, name, group]
+      default:
+        field: order
+        direction: ascending
+    view_groups:
+      - { label: 구분, field: group }
+    fields:
+      - name: name
+        label: 이름
+        widget: string
+      - name: group
+        label: 구분
+        widget: select
+        default: researcher
+        options:
+          - { label: 교수, value: professor }
+          - { label: 연구원·학생, value: researcher }
+          - { label: 행정, value: staff }
+          - { label: 졸업생 (Alumni), value: alumni }
+      - name: role
+        label: 직책
+        widget: string
+        hint: "예: Ph.D. Student, Associate Professor  ( / 를 넣으면 줄이 바뀝니다)"
+      - name: photo
+        label: 사진
+        widget: image
+        required: false
+        hint: 세로 사진(3:4 비율)이 가장 잘 맞습니다.
+      - name: email
+        label: 이메일 (선택)
+        widget: string
+        required: false
+      - name: order
+        label: 표시 순서
+        widget: number
+        value_type: int
+        default: 500
+        hint: 숫자가 작을수록 앞에 표시됩니다. (기존 구성원은 10, 20, 30… 순서)
+
+  # ───────────────────────── 연구 ─────────────────────────
+  - name: research
+    label: 연구 소개 이미지
+    label_singular: 연구 이미지
+    folder: src/content/research
+    extension: yml
+    format: yml
+    create: true
+    delete: true
+    slug: "{{uuid_short}}"
+    identifier_field: title
+    summary: "{{order}} · {{title}}"
+    media_folder: /public/images/research
+    public_folder: /images/research
+    sortable_fields:
+      fields: [order, title]
+      default:
+        field: order
+        direction: ascending
+    fields:
+      - name: title
+        label: 설명
+        widget: string
+        hint: 화면에는 보이지 않고, 시각장애인용 설명(대체 텍스트)으로 쓰입니다.
+      - name: image
+        label: 이미지
+        widget: image
+      - name: order
+        label: 표시 순서
+        widget: number
+        value_type: int
+        default: 500
+        hint: 숫자가 작을수록 앞에 표시됩니다.
+
+  # ───────────────────────── 사이트 설정 ─────────────────────────
+  - name: settings
+    label: 사이트 설정
+    editor:
+      preview: false
+    files:
+      - name: home
+        label: 홈 화면
+        file: src/content/settings/home.yml
+        fields:
+          - name: slides
+            label: 상단 사진 슬라이드
+            widget: list
+            summary: "{{image}}"
+            fields:
+              - name: image
+                label: 사진
+                widget: image
+                media_folder: /public/images/slider
+                public_folder: /images/slider
+          - name: headline
+            label: 연구실 이름 (영문)
+            widget: string
+          - name: subheadline
+            label: 한 줄 소개
+            widget: string
+          - name: intro
+            label: 소개글
+            widget: markdown
+            minimal: true
+            buttons: [bold, italic, link]
+            editor_components: []
+      - name: site
+        label: 연락처·채용 안내
+        file: src/content/settings/site.yml
+        fields:
+          - name: name
+            label: 사이트 이름
+            widget: string
+          - name: address
+            label: 주소
+            widget: string
+          - name: email
+            label: 대표 이메일
+            widget: string
+          - name: vacancies
+            label: 채용 안내 (Join us 페이지)
+            widget: markdown
+            minimal: true
+            buttons: [bold, italic, link, bulleted-list]
+            editor_components: []

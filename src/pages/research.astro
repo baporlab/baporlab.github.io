@@ -1,0 +1,15 @@
+---
+import Base from '../layouts/Base.astro';
+import { getResearch } from '../lib/data';
+const items = await getResearch();
+---
+<Base title="Research">
+  <h1>Research</h1>
+  <div class="research-grid">
+    {items.map((r) => (
+      <figure>
+        <img src={r.image} alt={r.title} loading="lazy" />
+      </figure>
+    ))}
+  </div>
+</Base>
